@@ -10,3 +10,9 @@ groups:
    - alert: ErrorGreaterThan5
      expr: app_errors_total > 5
      for: 10s
+
+ - name: Function greater than 5
+   rules:
+   - alert: FunctionGreaterThan5
+     expr: app_function_duration_seconds_count{function_name="calculate_duration"} > 5
+     for: 10s

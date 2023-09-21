@@ -1,9 +1,12 @@
 global:
   resolve_timeout: 5m
 route:
-  receiver: webhook_receiver
+  receiver: discord-webhook
 receivers:
-    - name: webhook_receiver
+    - name: discord-webhook
+      discord_configs:
+        - webhook_url: 'https://discord.com/api/webhooks/1154487689559670794/QjHtmvfcFXBTq5XC4Fhf8-mQc3K5pYSvn62t8pZ23QPUgIjWEWAckf0XQe4s3jiGCGfu'
+          send_resolved: false
       webhook_configs:
         - url: 'https://webhook.site/c2058391-210e-4b49-9243-2fd8b01774f1'
           send_resolved: false
